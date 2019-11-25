@@ -49,50 +49,59 @@ export default [
     ]
   },
   {
-    path: '',
-    name: 'doc',
-    meta: {
-      title: '文档',
-      href: 'https://lison16.github.io/iview-admin-doc/#/',
-      icon: 'ios-book'
-    }
-  },
-  {
-    path: '/join',
-    name: 'join',
+    path: '/send',
+    name: 'send',
     component: Main,
     meta: {
       hideInBread: true
     },
     children: [
       {
-        path: 'join_page',
-        name: 'join_page',
+        path: 'send_page',
+        name: 'send_page',
         meta: {
-          icon: '_qq',
-          title: 'QQ群'
-        }
-        // component: () => import('@/view/join-page.vue')
+          icon: 'md-notifications',
+          title: '发送管理'
+        },
+        component: () => import('@/views/single-page/send/send.vue')
       }
     ]
   },
   {
-    path: '/message',
-    name: 'message',
+    path: '/label',
+    name: 'label',
     component: Main,
     meta: {
-      hideInBread: true,
-      hideInMenu: true
+      hideInBread: true
     },
     children: [
       {
-        path: 'message_page',
-        name: 'message_page',
+        path: 'label_page',
+        name: 'label_page',
         meta: {
           icon: 'md-notifications',
-          title: '消息中心'
-        }
-        // component: () => import('@/view/single-page/message/index.vue')
+          title: '标签管理'
+        },
+        component: () => import('@/views/single-page/label/label.vue')
+      }
+    ]
+  },
+  {
+    path: '/user',
+    name: 'user',
+    component: Main,
+    meta: {
+      hideInBread: true
+    },
+    children: [
+      {
+        path: 'user_page',
+        name: 'user_page',
+        meta: {
+          icon: 'md-notifications',
+          title: '用户管理'
+        },
+        component: () => import('@/views/single-page/user/user.vue')
       }
     ]
   },

@@ -84,6 +84,7 @@ export default {
   },
   methods: {
     handleSelect (name) { // 选择菜单（MenuItem）时触发
+    console.log(name)
       this.$emit('on-select', name)
     },
     getOpenedNamesByActiveName (name) {
